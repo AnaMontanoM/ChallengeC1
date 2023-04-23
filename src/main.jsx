@@ -1,12 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
+import { Provider } from "./components/Context";
+import { PrivateRoutes } from "./components/PrivateRoutes";
+import { LoginPage } from "./components/LoginPage";
+import { Homepage } from "./components/Homepage";
 import { MainApp2 } from "./components/MainApp2";
-import { Provider } from "react-redux";
-import { Store } from "./Store/Store";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<Provider store={Store}>
-		<MainApp2 />
+	<Provider>
+		<BrowserRouter>
+			<MainApp2 />
+			<Routes>
+				<Route path="/login" element={<LoginPage />} />
+				<Route element={<PrivateRoutes children={<Homepage />} />}>
+					<Route path="/" element={<Homepage />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	</Provider>
 );

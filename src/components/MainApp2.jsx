@@ -30,4 +30,3 @@ export const MainApp2 = () => {
 		</>
 	);
 };
-Footer;
