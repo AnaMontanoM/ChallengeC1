@@ -1,7 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Context } from "./Context";
+//import { Context } from "./Context";
+import { Context } from "./context";
 import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {

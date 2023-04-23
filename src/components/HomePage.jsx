@@ -1,7 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { Context } from "./Context";
+//import { Context } from "./Context";
+import { Context } from "./context";
 
 export const Homepage = () => {
 	let { isLoggedIn } = useContext(Context);

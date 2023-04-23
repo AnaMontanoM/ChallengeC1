@@ -1,21 +1,17 @@
 import React from "react";
-import { useParams, useSearchParams, useNavigate } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { About } from "./About";
+import { ProductsPage } from "./ProductsPage";
 
-export const ProductsPage = () => {
-	const { id } = useParams();
-	const [params] = useSearchParams();
-
-	const navigate = useNavigate();
-
-	const onLogout = () => {
-		navigate("/Login", {
-			replace: true,
-		});
-	};
+export const UserRoutes = () => {
 	return (
-		<div>
-			Products Page {id} {params.get("sort")}
-			<button onClick={() => onLogout()}>Log out</button>
-		</div>
+		<>
+			<NavLink to="/about">About</NavLink>
+			<NavLink to="/products">Productos</NavLink>
+			<Routes>
+				<Route path="/about" element={<About />} />
+				<Route path="/products" element={<ProductsPage />} />
+			</Routes>
+		</>
 	);
 };

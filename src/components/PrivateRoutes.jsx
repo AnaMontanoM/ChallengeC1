@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
-import { Context } from "./Context";
+//import { Context } from "./Context";
+import { Context } from "./context";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const PrivateRoutes = ({ children }) => {
