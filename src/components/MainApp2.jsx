@@ -10,5 +10,3 @@ export const MainApp2 = () => {
 		</>
 	);
 };
-
-//OTRO COMMIT PORQUE EL CHALLENGE10 Y EL CHALLENGE11 LOS HICE JUNTOS
